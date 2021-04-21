@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <bean class="com.tyss.springcore.beans.Department" id="dept">
+    
+    <property name="dId" value="100"></property>
+    <property name="dname" value="Development"></property>
+    </bean>
+    
+    
+   <!--   <bean class="com.tyss.springcore.beans.Employee" id="emp">   by constructor
+    <constructor-arg name="id" value="10"/>
+     <constructor-arg name="name" value="kiran"/>
+      <constructor-arg name="dept" value="dept"/>
+      </bean>
+       -->
+      
+      
+    <!-- 
+     <bean class="com.tyss.springcore.beans.Employee" id ="emp">   
+      <property name="id" value="20"></property>
+            <property name="name" value="punith"></property>
+                  <property name="dept" ref="dept"></property>
+                  </bean> --> 
+                  
+                  
+                  
+      <bean class="com.tyss.springcore.beans.Employee" id ="emp" autowire="byType">
+      <property name="id" value="20"></property>
+            <property name="name" value="punith"></property>
+                  
+                  </bean>
+      
+      
+      
+      
+    </beans>

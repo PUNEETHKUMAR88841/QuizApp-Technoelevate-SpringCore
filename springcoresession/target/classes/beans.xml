@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    
+     <!-- Bean will create the object for employee -->
+     <!-- with fully qulified name -->
+    <bean class="com.tyss.springcore.beans.Employee"  id="emp" scope="prototype"/>  <!-- default it will,take single ton so prototype is given -->
+    <bean class="com.tyss.springcore.beans.Employee"  id="employee">
+    
+    <constructor-arg name="id" value="10"></constructor-arg>
+    <constructor-arg name="name" value="ABC"></constructor-arg>
+    
+    </bean>
+   
+    
+    </beans>
